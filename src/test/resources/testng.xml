@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/mohai/Downloads/webAutomation9WithPom-master/AppiumMobileAutomation_B9">
+        <classes>
+            <class name="EMI_Calculator.testCases.HomeScreenTest"/>
+            <class name="EMI_Calculator.testCases.CalculatorTest"/>
+            <class name="EMI_Calculator.testCases.CompareTest"/>
+        </classes>
+    </test>
+</suite>
