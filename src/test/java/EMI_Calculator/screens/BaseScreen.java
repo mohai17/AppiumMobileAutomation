@@ -1,6 +1,8 @@
 package EMI_Calculator.screens;
 
 import EMI_Calculator.common.General;
+import EMI_Calculator.reports.ReportTestManager;
+import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,11 +26,13 @@ public class BaseScreen extends Screen{
 
     @Override
     public WebElement getAppElement(By locator) {
+        addInfo("AppElement is locating.");
         return appDriver.findElement(locator);
     }
 
     @Override
     public List<WebElement> getAppElements(By locator) {
+        addInfo("AppElements are locating.");
         return appDriver.findElements(locator);
     }
 
@@ -43,6 +47,12 @@ public class BaseScreen extends Screen{
             return tClass.getDeclaredConstructor(AndroidDriver.class).newInstance(appDriver);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void addInfo(String msg){
+        if(ReportTestManager.getTest()!=null){
+            ReportTestManager.getTest().log(Status.INFO,msg);
         }
     }
 }

@@ -57,4 +57,8 @@ public class BaseTest {
         appDriver.quit();
     }
 
+    public AndroidDriver getWebDriver(){
+        return appDriver;
+    }
+
 }

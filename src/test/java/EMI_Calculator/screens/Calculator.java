@@ -12,6 +12,7 @@ public class Calculator extends BaseScreen{
 
     public Calculator fillAmount(){
 
+        addInfo("Loan amount Field");
         waitForElement(By.id("etLoanAmount"));
         getAppElement(By.id("etLoanAmount")).sendKeys("500");
         getAppElement(By.id("rbLoanAmount")).click();
@@ -22,6 +23,7 @@ public class Calculator extends BaseScreen{
 
     public Calculator fillInterest(){
 
+        addInfo("Interest field.");
         waitForElement(By.id("etInterest"));
         getAppElement(By.id("etInterest")).sendKeys("5");
         getAppElement(By.id("rbInterest")).click();
@@ -32,6 +34,7 @@ public class Calculator extends BaseScreen{
 
     public Calculator fillPeriod(){
 
+        addInfo("Period Field");
         waitForElement(By.id("etYears"));
         getAppElement(By.id("etYears")).sendKeys("10");
         getAppElement(By.id("etMonths")).sendKeys("6");
@@ -43,6 +46,7 @@ public class Calculator extends BaseScreen{
 
     public Calculator fillEMI(){
 
+        addInfo("EMI field.");
         waitForElement(By.id("etEMI"));
         getAppElement(By.id("etEMI")).sendKeys("8");
         getAppElement(By.id("rbEMI")).click();
@@ -53,6 +57,7 @@ public class Calculator extends BaseScreen{
 
     public Calculator fillProgressFee(){
 
+        addInfo("Progress Fee field.");
         waitForElement(By.id("etFee"));
         getAppElement(By.id("etFee")).sendKeys("3");
 
