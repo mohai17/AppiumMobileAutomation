@@ -4,9 +4,10 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/mohai/Downloads/webAutomation9WithPom-master/AppiumMobileAutomation_B9">
         <classes>
-            <class name="EMI_Calculator.testCases.HomeScreenTest"/>
-            <class name="EMI_Calculator.testCases.CalculatorTest"/>
-<!--            <class name="EMI_Calculator.testCases.CompareTest"/>-->
+<!--            <class name="EMI_Calculator.testCases.HomeScreenTest"/>-->
+<!--            <class name="EMI_Calculator.testCases.CalculatorTest"/>-->
+<!--            <class name="EMI_Calculator.testCases.DetailsTest"/>-->
+            <class name="EMI_Calculator.testCases.CompareTest"/>
         </classes>
     </test>
 </suite>
