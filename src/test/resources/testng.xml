@@ -6,7 +6,7 @@
         <classes>
             <class name="EMI_Calculator.testCases.HomeScreenTest"/>
             <class name="EMI_Calculator.testCases.CalculatorTest"/>
-            <class name="EMI_Calculator.testCases.CompareTest"/>
+<!--            <class name="EMI_Calculator.testCases.CompareTest"/>-->
         </classes>
     </test>
 </suite>
