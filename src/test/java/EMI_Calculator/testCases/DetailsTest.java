@@ -2,19 +2,20 @@ package EMI_Calculator.testCases;
 
 import EMI_Calculator.screens.Calculator;
 import EMI_Calculator.screens.DetailsScreen;
+import EMI_Calculator.screens.HomeScreen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DetailsTest extends BaseTest{
 
-    Calculator calculator;
+    HomeScreen homeScreen;
     DetailsScreen detailsScreen;
 
     @Test(priority = 0)
     public void detailsButtonTest(){
 
-        calculator = screen.getInstance(Calculator.class);
-        boolean actual = calculator.tapStartButton()
+        homeScreen = screen.getInstance(HomeScreen.class);
+        boolean actual = homeScreen.tapStartButton()
                         .fillAmount()
                         .fillInterest()
                         .fillPeriod()

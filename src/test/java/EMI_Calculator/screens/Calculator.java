@@ -9,14 +9,6 @@ public class Calculator extends BaseScreen{
         super(appDriver);
     }
 
-    public Calculator tapStartButton(){
-
-        waitForElement(By.id("btnStart"));
-        getAppElement(By.id("btnStart")).click();
-
-        return this;
-
-    }
 
     public Calculator fillAmount(){
 

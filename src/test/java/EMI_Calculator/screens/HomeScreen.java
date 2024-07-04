@@ -20,6 +20,7 @@ public class HomeScreen  extends BaseScreen{
 
         waitForElement(By.id("btnStart"));
         return getAppElements(By.id("btnStart")).isEmpty();
+
     }
 
     public boolean getCompareButton(){
@@ -28,6 +29,21 @@ public class HomeScreen  extends BaseScreen{
         return getAppElements(By.id("btnCompare")).isEmpty();
     }
 
+    public Calculator tapStartButton(){
 
+        waitForElement(By.id("btnStart"));
+        getAppElement(By.id("btnStart")).click();
+
+        return getInstance(Calculator.class);
+
+    }
+
+    public Compare tapCompareButton(){
+
+        waitForElement(By.id("btnCompare"));
+        getAppElement(By.id("btnCompare")).click();
+        return getInstance(Compare.class);
+
+    }
 
 }
