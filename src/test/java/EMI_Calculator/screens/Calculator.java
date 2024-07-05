@@ -10,56 +10,63 @@ public class Calculator extends BaseScreen{
     }
 
 
-    public Calculator fillAmount(){
+    public Calculator fillAmount(String loanAmount){
 
         addInfo("Loan amount Field");
         waitForElement(By.id("etLoanAmount"));
-        getAppElement(By.id("etLoanAmount")).sendKeys("500");
+        getAppElement(By.id("etLoanAmount")).clear();
+        getAppElement(By.id("etLoanAmount")).sendKeys(loanAmount);
         getAppElement(By.id("rbLoanAmount")).click();
 
         return this;
 
     }
 
-    public Calculator fillInterest(){
+    public Calculator fillInterest(String interest){
 
         addInfo("Interest field.");
         waitForElement(By.id("etInterest"));
-        getAppElement(By.id("etInterest")).sendKeys("5");
+        getAppElement(By.id("etInterest")).clear();
+        getAppElement(By.id("etInterest")).sendKeys(interest);
         getAppElement(By.id("rbInterest")).click();
 
         return this;
 
     }
 
-    public Calculator fillPeriod(){
+    public Calculator fillPeriod(String years, String months){
 
         addInfo("Period Field");
         waitForElement(By.id("etYears"));
-        getAppElement(By.id("etYears")).sendKeys("10");
-        getAppElement(By.id("etMonths")).sendKeys("6");
+        getAppElement(By.id("etYears")).clear();
+        getAppElement(By.id("etYears")).sendKeys(years);
+        waitForElement(By.id("etMonths"));
+        getAppElement(By.id("etMonths")).clear();
+        getAppElement(By.id("etMonths")).sendKeys(months);
         getAppElement(By.id("rbPeriod")).click();
 
         return this;
 
     }
 
-    public Calculator fillEMI(){
+    public Calculator fillEMI(String emi){
 
         addInfo("EMI field.");
         waitForElement(By.id("etEMI"));
-        getAppElement(By.id("etEMI")).sendKeys("8");
+        getAppElement(By.id("etEMI")).clear();
+        getAppElement(By.id("etEMI")).sendKeys(emi);
         getAppElement(By.id("rbEMI")).click();
 
         return this;
 
     }
 
-    public Calculator fillProgressFee(){
+    public Calculator fillProgressFee(String fee){
 
         addInfo("Progress Fee field.");
         waitForElement(By.id("etFee"));
-        getAppElement(By.id("etFee")).sendKeys("3");
+        getAppElement(By.id("etFee")).clear();
+        getAppElement(By.id("etFee")).sendKeys(fee);
 
         return this;
 

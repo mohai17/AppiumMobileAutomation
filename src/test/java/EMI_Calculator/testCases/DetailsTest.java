@@ -1,6 +1,6 @@
 package EMI_Calculator.testCases;
 
-import EMI_Calculator.screens.Calculator;
+
 import EMI_Calculator.screens.DetailsScreen;
 import EMI_Calculator.screens.HomeScreen;
 import org.testng.Assert;
@@ -11,16 +11,16 @@ public class DetailsTest extends BaseTest{
     HomeScreen homeScreen;
     DetailsScreen detailsScreen;
 
-    @Test(priority = 0)
+    @Test
     public void detailsButtonTest(){
 
         homeScreen = screen.getInstance(HomeScreen.class);
         boolean actual = homeScreen.tapStartButton()
-                        .fillAmount()
-                        .fillInterest()
-                        .fillPeriod()
-                        .fillEMI()
-                        .fillProgressFee()
+                        .fillAmount("1000")
+                        .fillInterest("4")
+                        .fillPeriod("5","6")
+                        .fillEMI("6")
+                        .fillProgressFee("7")
                         .tapCalculateButton()
                         .tapDetailButton()
                         .doesDetailButtonWork();
